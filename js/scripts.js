@@ -7,14 +7,21 @@ function size(name){
 	}
 	}
 
-
+$(document).ready(function() {
 $("#submit").click(function(event){
 	event.preventDefault();
 	
 	var inputSize=$("#size").val();
+	var inputCrust=$("#crust").val();
+	var inputTopping=$("#topping").val();
+	var inputAmountPizza=parseInt($("#quantity").val());
 
 	var sizePizza = new size(inputSize);
-	console.log(sizePizza.sizePrice());
+	// alert(sizePizza.sizePrice());
+	alert(inputSize);
+	alert(inputCrust);
+	alert(inputTopping);
+	alert(inputAmountPizza);
 
 });
-
+});
