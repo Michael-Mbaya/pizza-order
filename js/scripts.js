@@ -44,7 +44,7 @@ crust.prototype.crustPrice=function(){
 function topping(name){
 	this.toppingName=name;
 }
-//prototype for price of pizza toppings
+//prototype for price of pizza toppings (dependant on pizza sizes)
 topping.prototype.toppingPrice=function(){
 	if(this.toppingName==="none"){
 		return 0;
@@ -76,14 +76,26 @@ topping.prototype.toppingPrice=function(){
 	else if((this.toppingName==="onion")&&($("#size").val()==="small")){
 		return 20;
 	}
-	else if(this.toppingName==="beef"){
+	else if((this.toppingName==="beef")&&($("#size").val()==="large")){
 		return 150;
 	}
-	else if(this.toppingName==="chicken"){
+	else if((this.toppingName==="beef")&&($("#size").val()==="medium")){
+		return 100;
+	}
+	else if((this.toppingName==="beef")&&($("#size").val()==="small")){
+		return 70;
+	}
+	else if((this.toppingName==="chicken")&&($("#size").val()==="large")){
 		return 200;
 	}
+	else if((this.toppingName==="chicken")&&($("#size").val()==="medium")){
+		return 150;
+	}
+	else if((this.toppingName==="chicken")&&($("#size").val()==="small")){
+		return 100;
+	}
 	else{
-		alert("Please Input Crust Type to continue");
+		alert("Please Input Topping Desired to continue");
 		$("form").reset();
 	}
 }
@@ -99,7 +111,7 @@ $("#submit").click(function(event){
 	var inputSize=$("#size").val();
 	var inputCrust=$("#crust").val();
 	var inputTopping=$("#topping").val();
-	var inputAmountPizza=parseInt($("#quantity").val());
+	var inputAmountPizza=$("#quantity").val();
 
 	var sizePizza = new size(inputSize);
 	alert(inputSize);
@@ -110,17 +122,14 @@ $("#submit").click(function(event){
 	var toppingPizza = new topping(inputTopping);
 	alert(inputTopping);
 	alert(toppingPizza.toppingPrice());						//test toppingPrice
-	// alert (parseInt(inputAmountPizza*(parseInt(sizePizza.sizePrice())+parseInt(crustPizza.crustPrice())+parseInt(toppingPizza.toppingPrice()))));
 
+	if($("#quantity").val()===""){
+		alert("Please Input Amount of Pizzas you Want!");
+	}
+	else{
+	var pizzaPrice = (parseInt(parseInt(inputAmountPizza)*(parseInt(sizePizza.sizePrice())+parseInt(crustPizza.crustPrice())+parseInt(toppingPizza.toppingPrice()))));
+	alert(pizzaPrice);
+	}
 
-	// function totalPizza(){
-	// 	event.preventDefault;
-	// 	if(inputAmountPizza===""){
-	// 		alert("Please Input Amount of Pizzas you Want!");
-	// 	}
-	// 	return (parseInt(inputAmountPizza*(parseInt(sizePizza.sizePrice())+parseInt(crustPizza.crustPrice())+parseInt(toppingPizza.toppingPrice()))));
-	// }
-	// alert(totalPizza());
-	// $("#formPizza").reset();
 });
 });
