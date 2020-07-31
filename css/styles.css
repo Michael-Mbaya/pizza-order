@@ -1,0 +1,18 @@
+.container{
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+div{
+    overflow: hidden;
+}
+
+.space{
+    width: 100px;
+    text-align: center;
+}
+
+.selekta{
+    width: 150px;
+}
+

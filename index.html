@@ -5,15 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" 
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="x-icon" href="favicon.ico" type="image/x-icon">
     <title>Pizzero</title>
 </head>
 <body>
+    <div class="container bg-danger my-3">
+        <div class="row text-center">
+        <div class="start my-2 col-md-6">
+            <form class=" my-3">
+              <label class="space">Size: </label>
+                <select class="selekta" id="size">
+                  <option value="selectDefault">Select Size</option>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select><br>
+              <label class="space">Crust: </label>
+                <select class="selekta" id="crust">
+                  <option value="selectDefault">Select Crust</option>
+                  <option value="crusty">Crusty (Thin)</option>
+                  <option value="stuffed">Stuffed (Thick)</option>
+                  <option value="glutenFree">Gluten Free</option>
+                </select><br>
+                <label class="space">Topping: </label>
+                <select class="selekta" id="topping">
+                    <option value="selectDefault">Select Topping</option>
+                    <option value="none">No Topping</option>
+                    <option value="mushroom">Mushroom</option>
+                    <option value="sausage">Sausage</option>
+                    <option value="onion">Onions & Tomatoes</option>
+                    <option value="beef">Beef</option>
+                    <option value="chicken">Chicken</option>
+                </select><br>
+                <label class="space">How many: </label>
+                  <input class="selekta" type="number" id="quantity" name="quantity" min="1"><br>
+                  <button type="submit" class="btn-primary mt-2" id="submit">See</button>
+            </form>
+        </div>
+        <div class=" res my-3 col-md-6">
+            <p>dfgh</p> 
+        </div>
+        </div>
+    </div>
     
 </body>
 </html>
