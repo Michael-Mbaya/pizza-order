@@ -103,7 +103,7 @@ function pizzaTotal(){
 }
 
 $(document).ready(function() {
-$("#submit").click(function(event){
+	$("#submit").click(function(event){
 	event.preventDefault();
 	
 	var inputSize=$("#size").val();
@@ -133,18 +133,33 @@ $("#submit").click(function(event){
 	
 	else{
 		var pizzaPrice = (parseInt(parseInt(inputAmountPizza)*(parseInt(sizePizza.sizePrice())+parseInt(crustPizza.crustPrice())+parseInt(toppingPizza.toppingPrice()))));
-		alert(pizzaPrice);
+		// alert(pizzaPrice);				//test pizza order price
+		$(".res").show();
 		$("#listOrders").append("<p>Pizza Size '" +inputSize  + "' = " +sizePizza.sizePrice()
 													+", Crust Size: '" +inputCrust  + "' = " +crustPizza.crustPrice()
-													+", Topping: '" +inputTopping  + "' = " +toppingPizza.toppingPrice()+"</p>");
-		$("#listOrders").append("<p>Total for This Order : "+inputAmountPizza+" Pizza *"+"("
+													+", Topping: '" +inputTopping  + "' = " +toppingPizza.toppingPrice()
+													+". Total for This Order : "+inputAmountPizza+" Pizza *"+"("
 													+sizePizza.sizePrice()+"+"+crustPizza.crustPrice()+"+"
 													+toppingPizza.toppingPrice()+")"+" = "
 													+"<span class=\"totalPizza text-dark\">"+pizzaPrice+"</span>"+"</p>");
-		$("form").reset();
 	}
+
+	$("#confirm").click(function(){
+		$("#submit").prop("disabled", true);
+		$("#addPizza").prop("disabled", true);
+		$("#checkout").show();
+	})
+	$("#checkout").click(function(){
+		// $(".deliver").show();
+	})
+
+	// var location = prompt('Please enter your Location');
 
   // $("").append("<p>"+"You will pay " + newTotal + "</p>");
 
 });
+});
+
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
 });

@@ -1,6 +1,12 @@
+body{
+    height: 100%;
+    background-image: url('../img/pizza.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 .container{
     height: 100%;
-    /* overflow: hidden; */
 }
 
 div{
@@ -14,9 +20,23 @@ label{
     text-align: center;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
 #quantity,#crust,#size,#topping{
-    width: 125px;
+    width: 128px;
     height: 25px;
+}
+
+.res{
+    display: none;
+}
+
+#checkout{
+    display: none;
 }
 
 .h-up{
@@ -27,7 +47,7 @@ label{
 }
 
 #crustyTable,#sizeTable{
-    height: 115px;
+    height: 117px;
 }
 .totalPizza{
     text-decoration: underline;
@@ -36,5 +56,6 @@ label{
 }
 
 #listOrders p{
-    margin: 2px 5px;
+    margin: 5px 5px;
+    padding: 0px 5px;
 }

@@ -12,11 +12,11 @@
     <title>Pizzero</title>
 </head>
 <body>
-    <div class="container bg-info my-3 px-0">
+    <div class="container bg-info my-3">
 			<h3 class=" text-center my-2">Check Our Menu Prices</h3>
 			<div class=" row m-auto">
 				<div class="col-md-6 text-center px-1">
-				<table class="table table-striped bg-light table-hover">
+				<table class="table table-responsive-sm table-striped bg-light table-hover text-center">
 					<h4 class="bg-dark text-white m-0">Toppings</h4>
 					<thead class="thead">
 						<tr>
@@ -67,7 +67,7 @@
 				</table>
 				</div>
 				<div class="col-md-6 align-self-center text-center px-1">
-					<table class="table table-striped bg-light table-hover" id="crustyTable">
+					<table class="table table-responsive-sm table-striped bg-light table-hover text-center" id="crustyTable">
 						<h4 class="bg-dark text-white m-0 h-up">Crusts</h4>
 						<thead class="thead-light">
 							<tr>
@@ -110,11 +110,11 @@
       <div class="holla m-auto">
         <div class="orders my-2">
             <form id="formPizza">
-							<div class="d-flex flex-wrap justify-content-start text-left m-3 px-1">
+							<div class="d-flex flex-wrap justify-content-start text-left m-auto p-1">
 							<div>
               <label class="space">Size: </label>
                 <select class="selekta" id="size">
-                  <option value="selectDefault">Size</option>
+                  <option value="selectDefault">Select Size</option>
                   <option value="small">Small</option>
                   <option value="medium">Medium</option>
                   <option value="large">Large</option>
@@ -123,7 +123,7 @@
 							<div>
               <label class="space">Crust: </label>
                 <select class="selekta" id="crust">
-                  <option value="selectDefault">Crust</option>
+                  <option value="selectDefault">Select Crust</option>
                   <option value="crusty">Crusty (Thin)</option>
                   <option value="stuffed">Stuffed (Thick)</option>
                   <option value="glutenFree">Gluten Free</option>
@@ -132,7 +132,7 @@
 							<div>
                 <label class="space">Topping: </label>
                 <select class="selekta" id="topping">
-                    <option value="selectDefault">Topping</option>
+                    <option value="selectDefault">Select Topping</option>
                     <option value="none">No Topping</option>
                     <option value="mushroom">Mushroom</option>
                     <option value="sausage">Sausage</option>
@@ -148,12 +148,14 @@
 							</div>
 							
 							<div class="buttons text-center m-3 px-1">
-								<input class=" btn-primary m-2" type="submit" value="Add Order" onclick="event.preventDefault(); this.form.reset();">							
-								<input class=" btn-primary m-2" type="submit" value="Confirm Order" id="submit">
+								<input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Another Pizza" onclick="event.preventDefault(); this.form.reset();">
+								<button class="btn btn-primary" type="button" id="confirm" data-toggle="tooltip" data-placement="top" title="Click once done with your Order. Disables adding more Items to Cart">Confirm Order</button>
+								<input class="btn btn-primary m-2" type="submit" id="submit" data-toggle="tooltip" data-placement="top" title="click to add chosen pizza to your selections" value="Add to Cart">
+								<button class="btn btn-success" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="click to Proceed to Delivery and Payment">Checkout</button>
 							</div>
 						</form>
-				<div class="res">
-					<h3 class="m-0 text-center text-uppercase font-weight-bold">Order Summary</h3>
+				<div class="res text-center mb-2">
+					<h3 class="m-0 text-uppercase font-weight-bold">Order Summary</h3>
 					<div class=" text-justify text-white" id="listOrders">
 						
 					</div>
