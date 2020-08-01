@@ -36,7 +36,6 @@ crust.prototype.crustPrice=function(){
 	}
 	else{
 		alert("Please Input Crust Type to continue");
-		$("form").reset();
 	}
 }
 
@@ -96,7 +95,6 @@ topping.prototype.toppingPrice=function(){
 	}
 	else{
 		alert("Please Input Topping Desired to continue");
-		$("form").reset();
 	}
 }
 
@@ -114,22 +112,39 @@ $("#submit").click(function(event){
 	var inputAmountPizza=$("#quantity").val();
 
 	var sizePizza = new size(inputSize);
-	alert(inputSize);
-	alert(sizePizza.sizePrice());									//test sizePrice
+	// sizePizza.sizePrice();									//test sizePrice
 	var crustPizza = new crust(inputCrust);
-	alert(inputCrust);
-	alert(crustPizza.crustPrice());								//test crustPrice
+	// crustPizza.crustPrice();								//test crustPrice
 	var toppingPizza = new topping(inputTopping);
-	alert(inputTopping);
-	alert(toppingPizza.toppingPrice());						//test toppingPrice
+	// toppingPizza.toppingPrice();						//test toppingPrice
 
-	if($("#quantity").val()===""){
+	if($("#size").val()==="selectDefault"){
+		alert("Please Input Pizza Size to continue");
+	}
+	else if($("#crust").val()==="selectDefault"){
+		alert("Please Input Pizza Crust to continue");
+	}
+	else if($("#topping").val()==="selectDefault"){
+		alert("Please Input Pizza Toppings to continue");
+	}
+	else if($("#quantity").val()===""){
 		alert("Please Input Amount of Pizzas you Want!");
 	}
+	
 	else{
-	var pizzaPrice = (parseInt(parseInt(inputAmountPizza)*(parseInt(sizePizza.sizePrice())+parseInt(crustPizza.crustPrice())+parseInt(toppingPizza.toppingPrice()))));
-	alert(pizzaPrice);
+		var pizzaPrice = (parseInt(parseInt(inputAmountPizza)*(parseInt(sizePizza.sizePrice())+parseInt(crustPizza.crustPrice())+parseInt(toppingPizza.toppingPrice()))));
+		alert(pizzaPrice);
+		$("#listOrders").append("<p>Pizza Size '" +inputSize  + "' = " +sizePizza.sizePrice()
+													+", Crust Size: '" +inputCrust  + "' = " +crustPizza.crustPrice()
+													+", Topping: '" +inputTopping  + "' = " +toppingPizza.toppingPrice()+"</p>");
+		$("#listOrders").append("<p>Total for This Order : "+inputAmountPizza+" Pizza *"+"("
+													+sizePizza.sizePrice()+"+"+crustPizza.crustPrice()+"+"
+													+toppingPizza.toppingPrice()+")"+" = "
+													+"<span class=\"totalPizza text-dark\">"+pizzaPrice+"</span>"+"</p>");
+		$("form").reset();
 	}
+
+  // $("").append("<p>"+"You will pay " + newTotal + "</p>");
 
 });
 });

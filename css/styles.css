@@ -1,18 +1,40 @@
 .container{
-    height: 100vh;
+    height: 100%;
     /* overflow: hidden; */
 }
 
 div{
     overflow: hidden;
+
 }
 
-.space{
+label{
     width: 100px;
+    margin-left: 5px;
     text-align: center;
 }
 
-.selekta{
-    width: 150px;
+#quantity,#crust,#size,#topping{
+    width: 125px;
+    height: 25px;
 }
 
+.h-up{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#crustyTable,#sizeTable{
+    height: 115px;
+}
+.totalPizza{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#listOrders p{
+    margin: 2px 5px;
+}

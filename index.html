@@ -12,43 +12,153 @@
     <title>Pizzero</title>
 </head>
 <body>
-    <div class="container bg-info my-3">
-        <div class="row text-center">
-        <div class="start my-2 col-md-6">
-            <form class=" my-3" id="formPizza">
+    <div class="container bg-info my-3 px-0">
+			<h3 class=" text-center my-2">Check Our Menu Prices</h3>
+			<div class=" row m-auto">
+				<div class="col-md-6 text-center px-1">
+				<table class="table table-striped bg-light table-hover">
+					<h4 class="bg-dark text-white m-0">Toppings</h4>
+					<thead class="thead">
+						<tr>
+							<th></th>
+							<th>Small</th>
+							<th>Medium</th>
+							<th>Large</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>None</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Mushroom</td>
+							<td>100</td>
+							<td>160</td>
+							<td>250</td>
+						</tr>
+						<tr>
+							<td>Sausage</td>
+							<td>35</td>
+							<td>65</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>Onions & Tomatoes</td>
+							<td>20</td>
+							<td>35</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>Beef</td>
+							<td>70</td>
+							<td>100</td>
+							<td>150</td>
+						</tr>
+						<tr>
+							<td>Chicken</td>
+							<td>100</td>
+							<td>150</td>
+							<td>200</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="col-md-6 align-self-center text-center px-1">
+					<table class="table table-striped bg-light table-hover" id="crustyTable">
+						<h4 class="bg-dark text-white m-0 h-up">Crusts</h4>
+						<thead class="thead-light">
+							<tr>
+								<th></th>
+								<th>Crusty</th>
+								<th>Gluten-Free</th>
+								<th>Stuffed</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cost</td>
+								<td>100</td>
+								<td>150</td>
+								<td>200</td>
+							</tr>
+					</tbody>
+					</table>
+					<table class="table table-striped bg-light table-hover" id="sizeTable">
+						<h4 class="bg-dark text-white m-0 h-up">Pizza Sizes</h4>
+						<thead class="thead-light">
+							<tr>
+								<th></th>
+								<th>Small</th>
+								<th>Medium</th>
+								<th>Large</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cost</td>
+								<td>450</td>
+								<td>650</td>
+								<td>900</td>
+							</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+      <div class="holla m-auto">
+        <div class="orders my-2">
+            <form id="formPizza">
+							<div class="d-flex flex-wrap justify-content-start text-left m-3 px-1">
+							<div>
               <label class="space">Size: </label>
                 <select class="selekta" id="size">
-                  <option value="selectDefault">Select Size</option>
+                  <option value="selectDefault">Size</option>
                   <option value="small">Small</option>
                   <option value="medium">Medium</option>
                   <option value="large">Large</option>
-                </select><br>
+								</select>
+							</div>
+							<div>
               <label class="space">Crust: </label>
                 <select class="selekta" id="crust">
-                  <option value="selectDefault">Select Crust</option>
+                  <option value="selectDefault">Crust</option>
                   <option value="crusty">Crusty (Thin)</option>
                   <option value="stuffed">Stuffed (Thick)</option>
                   <option value="glutenFree">Gluten Free</option>
-                </select><br>
+								</select>
+							</div>
+							<div>
                 <label class="space">Topping: </label>
                 <select class="selekta" id="topping">
-                    <option value="selectDefault">Select Topping</option>
+                    <option value="selectDefault">Topping</option>
                     <option value="none">No Topping</option>
                     <option value="mushroom">Mushroom</option>
                     <option value="sausage">Sausage</option>
                     <option value="onion">Onions & Tomatoes</option>
                     <option value="beef">Beef</option>
                     <option value="chicken">Chicken</option>
-                </select><br>
+								</select>
+							</div>
+							<div>
                 <label class="space">How many: </label>
-                  <input class="selekta" type="text" id="quantity" min="1" placeholder="1"><br>
-                  <button type="submit" class="btn-primary mt-2" id="submit">See</button>
-            </form>
-        </div>
-        <div class=" res my-3 col-md-6">
-            <p>dfgh</p> 
-        </div>
-        </div>
+								<input class="selekta" type="number" id="quantity" min="1" placeholder="1" required>
+							</div>
+							</div>
+							
+							<div class="buttons text-center m-3 px-1">
+								<input class=" btn-primary m-2" type="submit" value="Add Order" onclick="event.preventDefault(); this.form.reset();">							
+								<input class=" btn-primary m-2" type="submit" value="Confirm Order" id="submit">
+							</div>
+						</form>
+				<div class="res">
+					<h3 class="m-0 text-center text-uppercase font-weight-bold">Order Summary</h3>
+					<div class=" text-justify text-white" id="listOrders">
+						
+					</div>
+				</div>
+			</div>
     </div>
     
 </body>
