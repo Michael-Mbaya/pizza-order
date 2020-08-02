@@ -151,12 +151,12 @@ $(document).ready(function() {
 		$("#cancel").show();
 	})
 	$("#checkout").click(function(){
-		var txt;
-    var checkout=confirm("Would you like to Have it Delivered?\n Click ok for Delivery or Cancel to Pick it up Yourself.");
+		// var txt;
+    var checkout=confirm("Would you like to Have it Delivered?\n Click OK for Delivery or CANCEL to Pick it up Yourself.");
     
 		if (checkout===false){
-      txt = "You pressed Cancel!";
-		  alert(txt);						//test cancel selection
+      // txt = "You pressed Cancel!";
+		  // alert(txt);						//test cancel selection
 		  var sum = 0;
 		  $('.totalPizza').each(function(){
     		sum += parseFloat($(this).text());
@@ -168,11 +168,20 @@ $(document).ready(function() {
       checkout.stopImmediatePropagation();
     } 
     else{
-		  txt = "You pressed OK!";
-      alert(txt);						//test ok selection
+		  // txt = "You pressed OK!";
+      // alert(txt);						//test ok selection
       var locate=prompt("Enter Your Location");
+        if (locate==="") {
+          alert("Please Input Location for Delivery!");
+        } else {
+          var sum = 0;
+		      $('.totalPizza').each(function(){
+    		  sum += parseFloat($(this).text());
+        });
+        alert("Dear Customer, We will Deliver Your Order at : "+locate+".\n Please have Your Cash/Mpesa Equivalent of "+sum+"\n The Delivery person will give your Package upon Payment Only!");
+        $("#listOrders").append("<p class=\"grandTotal text-center\">"+"Your Total Bill : "+"<span class=\"totallBill text-danger font-weight-bold\">"+sum+"</span>"+"</p>");
+      }
       checkout.stopImmediatePropagation();
- 
 		}
 	})
 

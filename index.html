@@ -109,10 +109,14 @@
 			</div>
       <div class="holla m-auto">
         <div class="orders my-2">
-            <form id="formPizza">
-							<div class="d-flex flex-wrap justify-content-start text-left m-auto p-1">
+          <div class="res text-center mb-2">
+            <h3 class="m-0 text-uppercase font-weight-bold">Order Summary</h3>
+            <div class=" text-justify text-white" id="listOrders"></div>
+          </div>
+          <form id="formPizza">
+						<div class="d-flex flex-wrap justify-content-start text-left m-auto p-1">
 							<div>
-              <label class="space">Size: </label>
+                <label class="space">Size: </label>
                 <select class="selekta" id="size">
                   <option value="selectDefault">Select Size</option>
                   <option value="small">Small</option>
@@ -121,7 +125,7 @@
 								</select>
 							</div>
 							<div>
-              <label class="space">Crust: </label>
+                <label class="space">Crust: </label>
                 <select class="selekta" id="crust">
                   <option value="selectDefault">Select Crust</option>
                   <option value="crusty">Crusty (Thin)</option>
@@ -132,13 +136,13 @@
 							<div>
                 <label class="space">Topping: </label>
                 <select class="selekta" id="topping">
-                    <option value="selectDefault">Select Topping</option>
-                    <option value="none">No Topping</option>
-                    <option value="mushroom">Mushroom</option>
-                    <option value="sausage">Sausage</option>
-                    <option value="onion">Onions & Tomatoes</option>
-                    <option value="beef">Beef</option>
-                    <option value="chicken">Chicken</option>
+                  <option value="selectDefault">Select Topping</option>
+                  <option value="none">No Topping</option>
+                  <option value="mushroom">Mushroom</option>
+                  <option value="sausage">Sausage</option>
+                  <option value="onion">Onions & Tomatoes</option>
+                  <option value="beef">Beef</option>
+                  <option value="chicken">Chicken</option>
 								</select>
 							</div>
 							<div>
@@ -146,7 +150,6 @@
 								<input class="selekta" type="number" id="quantity" min="1" placeholder="1" required>
 							</div>
 							</div>
-							
 							<div class="buttons text-center m-3 px-1">
 								<input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Pizza" onclick="event.preventDefault(); this.form.reset();">
 								<button class="btn btn-primary" type="button" id="confirm" data-toggle="tooltip" data-placement="top" title="Click once done with your Order. Disables adding more Items to Cart">Confirm Order</button>
@@ -155,12 +158,6 @@
 								<button class=" btn btn-danger text-white" type="button" id="cancel" data-toggle="tooltip" data-placement="top" title="Click to Cancel Your Order" onclick="document.location.reload(true)">Cancel Order</button>
 							</div>
 						</form>
-				<div class="res text-center mb-2">
-					<h3 class="m-0 text-uppercase font-weight-bold">Order Summary</h3>
-					<div class=" text-justify text-white" id="listOrders">
-						
-					</div>
-				</div>
 			</div>
 			</div>
     </div>	
