@@ -15,6 +15,7 @@
     <div class="container bg-info my-3">
 			<h3 class=" text-center my-2">Check Our Menu Prices</h3>
 			<div class=" row m-auto">
+
 				<div class="col-md-6 text-center px-1">
 				<table class="table table-responsive-sm table-striped bg-light table-hover text-center">
 					<h4 class="bg-dark text-white m-0">Toppings</h4>
@@ -65,7 +66,8 @@
 						</tr>
 					</tbody>
 				</table>
-				</div>
+        </div>
+        
 				<div class="col-md-6 align-self-center text-center px-1">
 					<table class="table table-responsive-sm table-striped bg-light table-hover text-center" id="crustyTable">
 						<h4 class="bg-dark text-white m-0 h-up">Crusts</h4>
@@ -105,13 +107,15 @@
 							</tr>
 					</tbody>
 					</table>
-				</div>
-			</div>
+        </div>
+        
+      </div>
+      
       <div class="holla m-auto">
         <div class="orders my-2">
           <div class="res text-center mb-2">
             <h3 class="m-0 text-uppercase font-weight-bold">Order Summary</h3>
-            <div class=" text-justify text-white" id="listOrders"></div>
+            <div class="text-white" id="listOrders"></div>
           </div>
           <form id="formPizza">
 						<div class="d-flex flex-wrap justify-content-start text-left m-auto p-1">
@@ -151,15 +155,16 @@
 							</div>
 							</div>
 							<div class="buttons text-center m-3 px-1">
-								<input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Pizza" onclick="event.preventDefault(); this.form.reset();">
-								<button class="btn btn-primary" type="button" id="confirm" data-toggle="tooltip" data-placement="top" title="Click once done with your Order. Disables adding more Items to Cart">Confirm Order</button>
+                <input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Pizza" onclick="event.preventDefault(); this.form.reset();">
+                <button class="btn btn-primary m-2" type="button" id="confirm" data-toggle="tooltip" data-placement="top" title="Click once done with your Order. Disables adding more Items to Cart">Confirm Order</button>
 								<input class="btn btn-primary m-2" type="submit" id="submit" data-toggle="tooltip" data-placement="top" title="Click to add chosen pizza to your selections" value="Add to Cart">
-								<button class="btn btn-success" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="Click to Proceed to Delivery and Payment"> Checkout </button>
-								<button class=" btn btn-danger text-white" type="button" id="cancel" data-toggle="tooltip" data-placement="top" title="Click to Cancel Your Order" onclick="document.location.reload(true)">Cancel Order</button>
-							</div>
+								<button class="btn btn-success m-2" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="Click to Proceed to Delivery and Payment"> Checkout </button>
+								<button class=" btn btn-danger m-2 text-white" type="button" id="cancel" data-toggle="tooltip" data-placement="top" title="Click to Cancel Your Order" onclick="document.location.reload(true)">Cancel Order</button>
+              </div>
 						</form>
 			</div>
-			</div>
+      </div>
+      
     </div>	
     
 </body>
