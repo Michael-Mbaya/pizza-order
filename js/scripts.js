@@ -152,18 +152,27 @@ $(document).ready(function() {
 	})
 	$("#checkout").click(function(){
 		var txt;
-		var checkout=confirm("Would you like to Have it Delivered?\n Click ok for Delivery or Cancel to Pick it up Yourself.");
-		if (checkout==true) {
-		  txt = "You pressed OK!";
-		  alert(txt);						//test ok selection
-		} else {
-		  txt = "You pressed Cancel!";
+    var checkout=confirm("Would you like to Have it Delivered?\n Click ok for Delivery or Cancel to Pick it up Yourself.");
+    
+		if (checkout===false){
+      txt = "You pressed Cancel!";
 		  alert(txt);						//test cancel selection
 		  var sum = 0;
 		  $('.totalPizza').each(function(){
     		sum += parseFloat($(this).text());
       });
-      alert(sum);           //test sum of all orders
+      // alert(sum);           //test sum of all orders
+      // sum.stopImmediatePropagation();
+      $("#listOrders").append("<p class=\"grandTotal text-center\">"+"Your Total Bill : "+"<span class=\"totallBill text-danger font-weight-bold\">"+sum+"</span>"+"</p>");
+      alert("Your Total Bill is:"+sum+"\n See Order Summary in Page Below.");
+      checkout.stopImmediatePropagation();
+    } 
+    else{
+		  txt = "You pressed OK!";
+      alert(txt);						//test ok selection
+      var locate=prompt("Enter Your Location");
+      checkout.stopImmediatePropagation();
+ 
 		}
 	})
 
