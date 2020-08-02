@@ -4,6 +4,10 @@ body{
     background-repeat: no-repeat;
 }
 
+.container{
+    border-radius: 30px;
+}
+
 @media only screen and (max-width: 480px) {
     .navy{
         display: flex;
