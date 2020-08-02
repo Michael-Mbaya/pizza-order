@@ -12,9 +12,17 @@
     <title>Pizzero</title>
 </head>
 <body>
-    <div class="container bg-info my-3">
+    <div class="container bg-info my-3 px-0">
+
+      <div class="navy text-right bg-dark p-3">
+        <a class=" text-white p-2" href="#">Home</a>
+        <a class=" text-white p-2" href="#menuPrices">Menu-Prices</a>
+        <a class=" text-white p-2" href="#formPizza">Order</a>
+        <a class=" text-white p-2" href="#footer">Contacts</a>
+      </div>
+
 			<h3 class=" text-center my-2">Check Our Menu Prices</h3>
-			<div class=" row m-auto">
+			<div class=" row m-auto" id="menuPrices">
 
 				<div class="col-md-6 text-center px-1">
 				<table class="table table-responsive-sm table-striped bg-light table-hover text-center">
@@ -118,7 +126,7 @@
             <div class="text-white" id="listOrders"></div>
           </div>
           <form id="formPizza">
-						<div class="d-flex flex-wrap justify-content-start text-left m-auto p-1">
+						<div class="d-flex flex-wrap justify-content-center justify-content-sm-center m-auto p-1" id="pizzaOptions">
 							<div>
                 <label class="space">Size: </label>
                 <select class="selekta" id="size">
@@ -165,6 +173,19 @@
 			</div>
       </div>
       
+      <footer class="text-white text-center bg-dark pt-2" id="footer">
+        <div class="my-3" id="icons">
+          <a href="#icons"><img src="img/social_icons/twitter.png" alt="Twitter Icon Link"></a>
+          <a href="#icons"><img src="img/social_icons/facebook.png" alt="Facebook Icon Link"></a>
+          <a href="#icons"><img src="img/social_icons/g_plus.png" alt="Google Plus Icon Link"></a>
+          <a href="#icons"><img src="img/social_icons/skype.png" alt="Skype Icon Link"></a>
+          <a href="#icons"><img src="img/social_icons/pinterest.png" alt="Pinterest Icon Link"></a>
+          <a href="#icons"><img src="img/social_icons/you_tube.png" alt="Yout Tube Icon Link"></a>
+        </div>
+        <p class="font-weight-bold my-0">Mickey's Pizzero</p>
+        <p class="font-weight-bold mt-1 mb-2"><script>document.write(new Date().getFullYear())</script></p>
+      </footer>
+
     </div>	
     
 </body>

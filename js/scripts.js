@@ -171,7 +171,7 @@ $(document).ready(function() {
       } else {
         alert("Dear Customer, an Order-Receipt has been sent to : "+contact+"\n Make sure to show the Text Upon Arrival while you wait for your Delicacy.");
         $("#listOrders").append("<p>"+"Dear Customer, an Order-Receipt has been sent to : "+contact+" . Make sure to show the Text Upon Arrival while you wait for your Delicacy."+"</p>");
-        $("#listOrders").append("<p>"+"Thank You for Being our Customer. Mickey's Pizzeria Appreciates You!!!"+"</p>");
+        $("#listOrders").append("<p>"+"Thank You for Being our Customer. Mickey's Pizzero Appreciates You!!!"+"</p>");
         $(".totalBill").focus();
         $("#checkout").hide();
         $("#cancel").hide();
@@ -186,17 +186,27 @@ $(document).ready(function() {
         } else {
           var sum = 0;
 		      $('.totalPizza').each(function(){
-    		  sum += parseFloat($(this).text());
-        });
-        alert("Dear Customer, We will Deliver Your Order at : "+locate+".\n Please have Your Cash/Mpesa Equivalent of "+sum+"\n The Delivery person will give your Package upon Payment Only!");
-        $("#listOrders").append("<p class=\"grandTotal text-center\">"+"Your Total Bill : "+"<span class=\"totallBill text-danger font-weight-bold\">"+sum+"</span>"+"</p>");
-        $("listOrders").append("<p>"+"Dear Customer, We will Deliver Your Order at : "+locate+". Please have Your Cash/Mpesa Equivalent of "+sum+". The Delivery person will give your Package upon Payment Only!"+"</p>");
-        $(".totalBill").focus();
-        $("#checkout").hide();
-        $("#cancel").hide();
-        $("#formPizza").hide();
+          sum += parseFloat($(this).text());  
+          });
+          alert("Dear Customer, We will Deliver Your Order at : "+locate+".\n Please have Your Cash/Mpesa Equivalent of "+sum+"\n The Delivery person will give your Package upon Payment Only!");
+          $("#listOrders").append("<p class=\"grandTotal text-center\">"+"Your Total Bill : "+"<span class=\"totallBill text-danger font-weight-bold\">"+sum+"</span>"+"</p>");
+          $("#listOrders").append("<p>"+"Dear Customer, We will Deliver Your Order at : "+locate+". Please have Your Cash/Mpesa Equivalent of "+sum+". The Delivery person will give your Package upon Payment Only!"+"</p>");
         }
-      checkout.stopImmediatePropagation();
+        var contact=prompt("Enter Your Phone Number to receive a Order-receipt text.");
+        if (contact==="") {
+          alert("Please Enter a valid Number! \n Please Try Again");
+          $("#cancel").click();
+        } else {
+          alert("Dear Customer, Our Sales Representative will shortly contact you at : "+contact+" to Confirm your Order.\n  Make sure to follow their Instructions for payment modes and Waiting Periods.");
+          $("#listOrders").append("<p>"+"Dear Customer, Our Sales Representative will shortly contact you at : "+contact+" to Confirm your Order.\n  Make sure to follow their Instructions for payment modes and Waiting Periods."+"</p>");
+          $("#listOrders").append("<p>"+"Thank You for Being our Customer. Mickey's Pizzero Appreciates You!!!"+"</p>");
+        } 
+    $(".totalBill").focus();
+    $("#checkout").hide();
+    $("#cancel").hide();
+    $("#formPizza").hide(); 
+    
+    checkout.stopImmediatePropagation();
 		}
 	})
 

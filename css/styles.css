@@ -4,7 +4,20 @@ body{
     background-repeat: no-repeat;
 }
 
-div{
+@media only screen and (max-width: 480px) {
+    .navy{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+}
+
+div,footer{
     overflow: hidden;
 }
 
