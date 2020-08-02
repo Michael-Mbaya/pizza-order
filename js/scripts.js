@@ -220,3 +220,27 @@ $(document).ready(function() {
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 });
+
+$(document).ready(function(){
+  $("#sizeButton").click(function(){
+    $(".toppings").hide();
+    $(".crusts").hide();
+    $(".sizes").show();
+  })
+});
+
+$(document).ready(function(){
+  $("#toppingButton").click(function(){
+    $(".sizes").hide();
+    $(".crusts").hide();
+    $(".toppings").show();
+  })
+});
+
+$(document).ready(function(){
+  $("#crustButton").click(function(){
+    $(".toppings").hide();
+    $(".sizes").hide();
+    $(".crusts").show();
+  })
+});

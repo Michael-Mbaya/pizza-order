@@ -4,6 +4,7 @@ body{
 
 .jumbo{
     background-image: url('../img/pizza-jum.jpg');
+    border-radius: 0px;
 }
 
 body,.jumbo{
@@ -32,6 +33,11 @@ div,footer,section{
     overflow: hidden;
 }
 
+.col-md-4 img{
+    width: inherit;
+    height: 200px;
+}
+
 label{
     width: 100px;
     margin-left: 5px;
@@ -49,7 +55,7 @@ label{
     height: 25px;
 }
 
-.res,#cancel,#checkout,#repeat{
+.sizes,.toppings,.crusts,.res,#cancel,#checkout,#repeat{
     display: none;
 }
 
