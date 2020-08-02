@@ -148,6 +148,7 @@ $(document).ready(function() {
 		$("#submit").prop("disabled", true);
 		$("#addPizza").prop("disabled", true);
 		$("#checkout").show();
+		$("#cancel").show();
 	})
 	$("#checkout").click(function(){
 		// $(".deliver").show();

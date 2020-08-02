@@ -148,10 +148,11 @@
 							</div>
 							
 							<div class="buttons text-center m-3 px-1">
-								<input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Another Pizza" onclick="event.preventDefault(); this.form.reset();">
+								<input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Pizza" onclick="event.preventDefault(); this.form.reset();">
 								<button class="btn btn-primary" type="button" id="confirm" data-toggle="tooltip" data-placement="top" title="Click once done with your Order. Disables adding more Items to Cart">Confirm Order</button>
-								<input class="btn btn-primary m-2" type="submit" id="submit" data-toggle="tooltip" data-placement="top" title="click to add chosen pizza to your selections" value="Add to Cart">
-								<button class="btn btn-success" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="click to Proceed to Delivery and Payment">Checkout</button>
+								<input class="btn btn-primary m-2" type="submit" id="submit" data-toggle="tooltip" data-placement="top" title="Click to add chosen pizza to your selections" value="Add to Cart">
+								<button class="btn btn-success" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="Click to Proceed to Delivery and Payment">Checkout</button>
+								<button class=" btn btn-danger text-white" type="button" id="cancel" data-toggle="tooltip" data-placement="top" title="Click to Cancel Your Order" onclick="document.location.reload(true)">Cancel Order</button>
 							</div>
 						</form>
 				<div class="res text-center mb-2">

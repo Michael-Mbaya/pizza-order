@@ -31,11 +31,7 @@ label{
     height: 25px;
 }
 
-.res{
-    display: none;
-}
-
-#checkout{
+.res,#cancel,#checkout{
     display: none;
 }
 
