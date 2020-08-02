@@ -176,6 +176,8 @@ $(document).ready(function() {
         $("#checkout").hide();
         $("#cancel").hide();
         $("#formPizza").hide();
+        $("#repeat").show();
+        $("#repeat").focus();
       }
       checkout.stopImmediatePropagation();
     } 
@@ -204,7 +206,9 @@ $(document).ready(function() {
     $(".totalBill").focus();
     $("#checkout").hide();
     $("#cancel").hide();
-    $("#formPizza").hide(); 
+    $("#formPizza").hide();
+    $("#repeat").show();
+    $("#repeat").focus(); 
     
     checkout.stopImmediatePropagation();
 		}

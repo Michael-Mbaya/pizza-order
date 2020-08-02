@@ -21,7 +21,21 @@
         <a class=" text-white p-2" href="#footer">Contacts</a>
       </div>
 
-			<h3 class=" text-center my-2">Check Our Menu Prices</h3>
+      <section class="intro">
+        <div class="jumbotron jumbo p-3 mb-1 text-white">
+          <h1 class="display-4 text-capitalize text-center">mickey's pizzero</h1>
+          <p class="lead">Mickeys Pizzero is the coolest new pizza joint right here in the Capital City. 
+            Comprising of some  top professional chefs and state of the art custom-engineered ovens, no other 
+            pizza in town would compare to our Pizzas. Come and experience a tastebuds adventure of a lifetime with us.</p>
+          <hr class="my-2">
+          <p>We also offer a wide range of refreshments and drinks for your choosing to go with our delicacies. 
+            A fun-filled environment, children safe and Ample Parking and social amenities close by at all times. 
+            Come and have a fun family outing while sharing a meal. Besides, <em>The way to our hearts is via food😌</em>
+          </p>
+        </div>
+      </section>
+
+			<h3 class=" text-center text-white my-2"><u>Our Menu Prices</u></h3>
 			<div class=" row m-auto" id="menuPrices">
 
 				<div class="col-md-6 text-center px-1">
@@ -166,10 +180,11 @@
                 <input class="btn btn-primary m-2" type="submit" id="addPizza" data-toggle="tooltip" data-placement="top" title="Click to Choose another Pizza For your Order" value="Add Pizza" onclick="event.preventDefault(); this.form.reset();">
                 <button class="btn btn-primary m-2" type="button" id="confirm" data-toggle="tooltip" data-placement="top" title="Click once done with your Order. Disables adding more Items to Cart">Confirm Order</button>
 								<input class="btn btn-primary m-2" type="submit" id="submit" data-toggle="tooltip" data-placement="top" title="Click to add chosen pizza to your selections" value="Add to Cart">
-								<button class="btn btn-success m-2" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="Click to Proceed to Delivery and Payment"> Checkout </button>
+								<button class="btn btn-success m-2" type="button" id="checkout" data-toggle="tooltip" data-placement="top" title="Click to Proceed to Delivery and Payment">  Checkout  </button>
 								<button class=" btn btn-danger m-2 text-white" type="button" id="cancel" data-toggle="tooltip" data-placement="top" title="Click to Cancel Your Order" onclick="document.location.reload(true)">Cancel Order</button>
               </div>
-						</form>
+            </form>
+            <button class="btn btn-success w-100 text-center text-dark" id="repeat" type="button" data-toggle="tooltip" data-placement="top" title="Click to Start another Purchase Order" onclick="document.location.reload(true)">Start another Purchase</button>
 			</div>
       </div>
       
