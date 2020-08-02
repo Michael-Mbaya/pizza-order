@@ -13,7 +13,7 @@ size.prototype.sizePrice=function(){
 	else if(this.sizeName==="small"){
 		return 450;
 	}
-	else{
+	else{			//unnecessary part??? not sure!!!
 		alert("Please Input Pizza Size to continue");
 		$("form").reset();
 	}
@@ -151,7 +151,15 @@ $(document).ready(function() {
 		$("#cancel").show();
 	})
 	$("#checkout").click(function(){
-		// $(".deliver").show();
+		var txt;
+		var checkout=confirm("Would you like to Have it Delivered? Click ok to confirm or Cancel to Pick it up Yourself.");
+		if (checkout==true) {
+		  txt = "You pressed OK!";
+		  alert(txt);						//test ok selection
+		} else {
+		  txt = "You pressed Cancel!";
+		  alert(txt);						//test cancel selection
+		}
 	})
 
 	// var location = prompt('Please enter your Location');
