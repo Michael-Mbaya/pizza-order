@@ -14,11 +14,16 @@
 ## BDD 
 ### Behaviour
 
-*
-*
-*
-*
-*
+* Click on the Check Pizza Sizes, Toppings and Crusts Buttons to see visual representations of our products
+* Select options of pizza sizes, crust types, toppings and amount of pizzas via a form
+* Add an item on click Add to Cart Button
+* Add multiple Items to cart again; After Adding to cart you can select another and add to Cart
+* Cart Items are Displayed Above the Form
+* Once done adding items to Cart, Click on Confirm Order Button to Start Checkout Process (Checkout Button)
+* Also, Once done adding items to Cart, Click on Cancel Order Button to Cancel the Order (Cancel Order Button)
+* On Checkout (After Clicking Checkout Button), User is Prompted on whether to have the Delivery Option or Pick-up Option.
+* Checkout Options Both Display the Total Bills For Items in the Cart and further Payment Options
+* Once done with Checkout, A button below the Order Details is Displayed for the Option of starting another Order (Restart the above steps for another Purchase Order)
 
 ## TECHNNOLOGIES USED
 * HTML
